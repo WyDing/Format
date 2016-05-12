@@ -10,4 +10,9 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
     public ApplicationTest() {
         super(Application.class);
     }
+
+    public void testInsertionFormatter(){
+        InsertionFormatter inf = new InsertionFormatter(" ","399998");
+        assertEquals("123 456", inf.format("123456"));
+    }
 }
